@@ -20,7 +20,7 @@
   --highlight-background-color: #ccc;
   --text-color: #000;
   --header-text-color: #464646;
-  --ey-highlight-color: rgb(255, 230, 0);
+  --pwc-highlight-color: #e0301e;
 
   /* fonts */
 
@@ -90,7 +90,7 @@ h2 { font-size: var(--heading-font-size-xl) }
 h3 { font-size: var(--heading-font-size-l) }
 h4 { font-size: var(--heading-font-size-m) }
 h5 { font-size: var(--heading-font-size-s);
-	color: rgb(255, 230, 0);
+	color: #2d2d2d;
 }
 h6 { font-size: var(--heading-font-size-xs) }
 
@@ -145,36 +145,36 @@ a.button:any-link, button {
 }
 
 
-.ey-task-cards{
+.pwc-task-cards{
 	text-align: center;
 }
 
-.ey-task-cards .columns-wrapper .columns .column{
+.pwc-task-cards .columns-wrapper .columns .column{
 	text-align: center;
 		border: 1px solid black;
 	color: black;
 
 	border-radius:10px;
-	background-color: var(--ey-highlight-color);
+	background-color: var(--pwc-highlight-color);
 /*		background-color: var(--header-background-color);*/
 	padding:10px;
 }
 
-.ey-task-cards .columns-wrapper{
+.pwc-task-cards .columns-wrapper{
 	padding-bottom: 100px;
 }
 
-.ey-task-cards .columns-wrapper .columns .column a:any-link{
+.pwc-task-cards .columns-wrapper .columns .column a:any-link{
 	color: black;
 }
 
-.ey-cards{
-	background-color:#2e2e37;
+.pwc-cards{
+	background-color:#f2f2f2;
 	color: white;
 	text-align:center;
 }
 
-.ey-cards .button-container a.button.secondary, button.secondary{
+.pwc-cards .button-container a.button.secondary, button.secondary{
 	
 	border: 1px solid white;
 	color: white;
