@@ -1,0 +1,54 @@
+main .alm {
+  width: unset;
+  text-align: center;
+  margin: 32px auto;
+}
+
+.alm-container{
+	text-align:center;
+}
+
+.alm-wrapper{
+	padding-top: 30px;
+}
+/*
+main .section {
+	text-align: center;	
+	padding-bottom: 50px;
+}
+*/
+
+main .alm > div {
+  display: block;
+  justify-content: center;
+}
+
+.alm > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+	width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	align-items: end;
+    grid-gap: 60px;
+
+}
+
+.alm > ul > li {
+	font-size:20px;
+	display: inline-block;
+
+/*
+    border: 1px solid var(--highlight-background-color);
+    background-color: var(--background-color)
+*/
+
+}
+
+.alm > ul > li img {
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}

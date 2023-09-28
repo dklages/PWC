@@ -13,7 +13,7 @@ const SEARCH_ICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 </svg>`;
 const IS_OPEN = 'is-Open';
 
-class Header {
+class Gnav {
   constructor(body, el) {
     this.el = el;
     this.body = body;
@@ -86,12 +86,17 @@ class Header {
   decorateBrand = () => {
     const brandBlock = this.body.querySelector('[class^="gnav-brand"]');
     if (!brandBlock) return null;
-    const brand = brandBlock.querySelector('a');
+//    const brand = brandBlock.querySelector('a');
+	      const brand = brandBlock.querySelector('picture');
 
     const { className } = brandBlock;
-    const classNameClipped = className.slice(0, -1);
-    const classNames = classNameClipped.split('--');
-    brand.className = classNames.join(' ');
+	console.log("Dave - className = "+className);
+//    const classNameClipped = className.slice(0, -1);
+//	  	console.log("Dave - classNameClipped = "+classNameClipped);
+//    const classNames = classNameClipped.split('--');
+//	  	console.log("Dave - classNamse = "+classNames);
+//    brand.className = classNames.join(' ');
+	brand.className = className;
     if (brand.classList.contains('with-logo')) {
       brand.insertAdjacentHTML('afterbegin', BRAND_IMG);
     }
@@ -99,11 +104,14 @@ class Header {
   }
 
   decorateLogo = () => {
-    const logo = this.body.querySelector('.adobe-logo a');
-    logo.classList.add('gnav-logo');
-    logo.setAttribute('aria-label', logo.textContent);
-    logo.textContent = '';
-    logo.insertAdjacentHTML('afterbegin', BRAND_IMG);
+    console.log("dave - decorating logo");
+	const logo = this.body.querySelector('.adobe-logo a');
+	if(logo){
+		logo.classList.add('gnav-logo');
+		logo.setAttribute('aria-label', logo.textContent);
+		logo.textContent = '';
+		logo.insertAdjacentHTML('afterbegin', BRAND_IMG);
+	}
     return logo;
   }
 
@@ -139,7 +147,12 @@ class Header {
         });
       }
 
-      if (menu.childElementCount > 0) {
+	//Open Asset catalog in new tab	
+	if (navLink.href.match('findmy')) {
+		 navLink.setAttribute('target','_blank');
+	 }
+
+      if (menu.childElementCount > 0) {			
         const id = `navmenu-${idx}`;
         menu.id = id;
         navItem.classList.add('has-Menu');
@@ -372,8 +385,10 @@ export default async function init(blockEl) {
         const gnavDoc = parser.parseFromString(html, 'text/html');
         const gnav = new Gnav(gnavDoc.body, blockEl);
         gnav.init();
-      } catch {
-        debug('Could not create global navigation.');
+      } catch (e){
+        debug('Could not create global navigation.'+ e);
+		  console.trace();
+		  
       }
     }
   }

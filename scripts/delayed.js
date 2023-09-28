@@ -5,3 +5,8 @@ import { sampleRUM } from './lib-franklin.js';
 sampleRUM('cwv');
 
 // add more delayed functionality here
+//Dave
+window.targetGlobalSettings = {  
+   bodyHidingEnabled: false,
+   cookieDomain: "main--franklin-site--dklages.hlx.live"
+};

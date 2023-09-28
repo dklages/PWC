@@ -1,39 +1,47 @@
 /* block specific CSS goes here */
 
 main .hero-container > div {
-  max-width: unset;
+    max-width: unset;
 }
   
 main .hero-container {
-  padding: 0;
+    padding: 0;
 }
   
 main .hero {
-  position: relative;
-  padding: 32px;
-  min-height: 300px;
+    position: relative;
+    padding: 32px;
+/*    min-height: 300px; dave*/
+	    min-height: 610px;
+	background: linear-gradient(180deg,rgba(46,46,56,0) 0%,#2e2e38 100%);
 }
 
 main .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
+    max-width: 800px;
+/*    margin-left: auto;*/
+    margin-right: auto;
+	padding-left: 5%;
+    color: white;
+	font-weight:400;
+	margin-top: 4em;
 }
 
+
 main .hero picture {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+
 }
 
 main .hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
 }
