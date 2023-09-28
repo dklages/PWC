@@ -15,11 +15,11 @@
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: #fff;
-  --header-background-color:#2e2f39;
+  --header-background-color:#fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #000;
-  --header-text-color: #fff;
+  --header-text-color: #464646;
   --ey-highlight-color: rgb(255, 230, 0);
 
   /* fonts */
