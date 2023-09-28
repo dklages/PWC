@@ -9,11 +9,26 @@ main .hero-container {
 }
   
 main .hero {
+/*
     position: relative;
     padding: 200px;
-/*    min-height: 300px; dave*/
+    min-height: 300px; 
 	    min-height: 610px;
 	color: white;
+*/
+	position: relative;
+/* padding: 200px; */
+padding-top: 80px;
+padding-bottom: 300px;
+/* margin-top: 90px; */
+min-height: 300px;
+height: 300px;
+padding-left: 250px;
+/* min-height: 610px; */
+color: white;
+}
+
+main .hero div {
 }
 
 main .hero h1 {
@@ -33,7 +48,7 @@ main .hero h1 {
 main .hero picture {
     position: absolute;
     z-index: -1;
-    top: 0;
+    top: 12%;
     left: 0;
     bottom: 0;
     right: 0;
