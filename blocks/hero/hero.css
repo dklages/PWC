@@ -10,10 +10,10 @@ main .hero-container {
   
 main .hero {
     position: relative;
-    padding: 32px;
+    padding: 200px;
 /*    min-height: 300px; dave*/
 	    min-height: 610px;
-	background: linear-gradient(180deg,rgba(46,46,56,0) 0%,#2e2e38 100%);
+	color: white;
 }
 
 main .hero h1 {
@@ -24,6 +24,9 @@ main .hero h1 {
     color: white;
 	font-weight:400;
 	margin-top: 4em;
+	  background-color: #2d2d2d;
+  box-shadow: 15px 0 0 #2d2d2d,-15px 0 0 #2d2d2d;
+
 }
 
 
